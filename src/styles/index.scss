@@ -1,0 +1,211 @@
+$bg-color: #101010;
+$bg-color-overlay: rgba(0, 0, 0, 0.9);
+$fg-color-light: #d0d0d0;
+$fg-color-dark: #333333;
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+body {
+  color: $fg-color-light;
+  background: transparent;
+  font-family: 'Ubuntu', serif;
+}
+
+.fullscreen {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $bg-color-overlay
+}
+
+#floatBtnNew {
+  position: sticky;
+  width: 100%;
+  top: 8px;
+  text-align: right;
+}
+
+#floatBtnNew i {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.input-container {
+  margin: 20% auto;
+  background-color: #ffffff;
+  width: 90%;
+  max-width: 600px;
+  line-height: 1.5px;
+  padding: 10px;
+  text-align: left;
+
+  label {
+    font-size: 12px;
+    color: $fg-color-dark;
+    margin-top: 1.8em;
+  }
+
+  input, textarea {
+    margin-top: 1em;
+    width: 100%;
+    background: transparent;
+    color: $fg-color-dark;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid $fg-color-dark;
+    margin-bottom: 2em;
+  }
+
+  input, label {
+    display: block;
+  }
+
+  textarea {
+    font-size: 13px;
+    min-height: 210px;
+    resize: vertical;
+  }
+
+  input {
+    font-size: 15px;
+  }
+
+  .button-container {
+    width: 100%;
+    text-align: right;
+  }
+}
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 230px);
+  justify-content: center;
+
+  figure {
+    background: #ffffff;
+    width: 180px;
+    display: inline-block;
+    padding: 15px 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .3);
+    -webkit-transition: all .20s linear;
+    -moz-transition: all .20s linear;
+    transition: all .20s linear;
+    position: relative;
+  }
+
+  figcaption {
+    color: $fg-color-dark;
+    font-size: 25px;
+    position: relative;
+    top: 15px;
+    text-align: right;
+  }
+
+  .scale-width {
+    width: 156px;
+  }
+
+  .scale-height {
+    height: 250px;
+  }
+
+  .icon {
+    cursor: pointer;
+    margin-left: 10px;
+  }
+
+}
+
+.imageEdit {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color: $bg-color-overlay;
+
+  .image {
+    position: fixed;
+    width: 96%;
+    max-height: 100%;
+    padding: 1% 2% 2%;
+    top: 50%;
+    transform: translate(0, -50%);
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+
+    .active {
+      color: lawngreen;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+#textEditor {
+  .icon-container {
+    text-align: right;
+    margin: 5%;
+  }
+
+  i {
+    color: $fg-color-light;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+}
+
+#fu-file {
+  font-size: 13px;
+  color: $fg-color-dark;
+  border-bottom: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.icon-container {
+  margin: 10px auto 0;
+  display: inline-block;
+  width: 50%;
+  max-width: 100%;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.icon {
+  cursor: pointer;
+  color: $fg-color-dark;
+  right: 0;
+  margin-left: 10px;
+}
+
+.light {
+  color: $fg-color-light;
+}
+
+.active {
+  color: darkgreen;
+}

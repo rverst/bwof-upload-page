@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Benni's Wall of Fame - Upload</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+</head>
+<body>
+<div id="floatBtnNew">
+  <i id="btn_new" class="icon material-icons md-48">add</i>
+</div>
+<div id="imageGrid"></div>
+<div id="textEditor" class="fullscreen hidden">
+  <div class="icon-container">
+    <i id="te-save" class="material-icons md-48">save</i>
+    <i id="te-close" class="material-icons md-48">close</i>
+  </div>
+  <div class="input-container">
+    <label for="te-title">Titel</label>
+    <input id="te-title" type="text" placeholder="Ein Titel"/>
+    <label for="te-text">Text</label>
+    <textarea id="te-text" placeholder="Hier kann ein Text stehen..."></textarea>
+  </div>
+</div>
+<div id="fileUpload" class="fullscreen hidden">
+  <div class="input-container">
+<!--    <div class="icon-container">-->
+<!--      <i id="btn-pic" class="icon material-icons md-light md-48 active">insert_photo</i>-->
+<!--      <i id="btn-ins" class="icon material-icons md-light md-48">face</i>-->
+<!--    </div>-->
+    <form id="fu-form" method="post" enctype="multipart/form-data" target="_self">
+      <label for="fu-file">Bild hochladen (png oder jpg)</label>
+      <input id="fu-file" name="uploadFile" type="file" accept="image/jpeg,image/png"/>
+      <label for="fu-title">Titel</label>
+      <input id="fu-title" type="text" name="title" placeholder="Ein Titel, kein Muss"/>
+      <label for="fu-text">Text</label>
+      <textarea id="fu-text" name="text" placeholder="Hier kann ein Text stehen, muss aber nicht"></textarea>
+      <label for="fu-url">URL</label>
+      <input id="fu-url" name="url" type="text" placeholder="https://www.instagram.com/p/{media-shortcode}/" />
+      <div class="button-container">
+        <button id="fu-cancel" type="reset">Doch nicht</button>
+        <button id="fu-submit" type="submit">Hochladen</button>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>
